@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<title>Product Detail</title>
+<style>
+*{
+  box-sizing: border-box;
+}
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .product-image {
+    flex: 0 0 50%;
+    margin-right: 20px;
+  }
+
+  .product-image img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .product-details {
+
+    flex: 0 0 50%;
+  }
+
+
+  .product-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .product-description {
+    margin-bottom: 20px;
+  }
+
+  .product-price {
+    font-size: 20px;
+    color: #ff5733;
+    margin-bottom: 10px;
+  }
+
+  .product-rating {
+    margin-bottom: 10px;
+  }
+
+  .product-rating .stars {
+    color: #ffd700;
+  }
+
+  .quantity {
+    margin-bottom: 20px;
+  }
+
+  .quantity input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+  }
+
+ .product button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .product button:hover {
+    background-color: #555;
+  }
+  .related-products {
+    margin-top: 20px;
+  }
+
+  .related-product {
+    flex: 0 0 calc(33.3333% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .related-product img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    .product {
+      flex-direction: column;
+    }
+
+    .product-image, .product-details {
+      flex: 0 0 100%;
+    }
+
+    .related-product {
+      flex: 0 0 100%;
+    }
+  }
+
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .product-card h3 {
+    margin-top: 10px;
+  }
+  
+  .product-card p {
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .product-card button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-card button:hover {
+    background-color: #555;
+  }
+</style>
+</head>
+<body>
+   <!-- Nav-Bar -->
+   <nav class="navbar navbar-expand-lg navbar-light pl-5 mt-2 font-weight-bold"
+   style="background-color: rgb(235, 251, 251);">
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav">
+       <li class="nav-item active pr-4">
+         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+       </li>
+       <li class="nav-item pr-4">
+         <a class="nav-link" href="products.html">Products</a>
+       </li>
+       <!-- <li class="nav-item pr-4">
+         <a class="nav-link" href="#">Services</a>
+       </li> -->
+       <li class="nav-item pr-4">
+         <a class="nav-link" href="contactUs.html">Contact Us</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="Aboutus.html">About Us</a>
+       </li>
+     </ul>
+
+   </div>
+   <div class="buttons" style="margin-left: 270px;">
+     <button type="button" class="btn btn-outline-primary mr-3" onclick="login()">Login</button>
+     <button type="button" class="btn btn-outline-primary mr-5">Sign Up</button>
+   </div>
+   <div class="carts" style="margin-right: 40px;">
+     <i class="fa-solid fa-cart-shopping" style="font-size: larger;"></i>
+   </div>
+ </nav>
+
+<div class="container">
+  <div class="product">
+    <div class="product-image">
+      <img src="img/b1.jpg" alt="Product Image">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Populer</div>
+      <div class="product-description">This is for Mudpump,Water well rig machince parts</div>
+      <div class="product-price">₹99000</div>
+      <div class="product-rating">
+        <span class="stars">★★★★☆</span>
+        <span>(25 reviews)</span>
+      </div>
+      <div class="quantity">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+      </div>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="related-products">
+    <h2>Similar Products</h2>
+    <!-- <div class="product">
+      <div class="related-product">
+        <img src="related-product1.jpg" alt="Related Product 1">
+        <div class="product-title">Related Product 1</div>
+        <div class="product-price">$49.99</div>
+      </div>
+      <div class="related-product">
+        <img src="related-product2.jpg" alt="Related Product 2">
+        <div class="product-title">Related Product 2</div>
+        <div class="product-price">$39.99</div>
+      </div>
+      <div class="related-product">
+        <img src="related-product3.jpg" alt="Related Product 3">
+        <div class="product-title">Related Product 3</div>
+        <div class="product-price">$59.99</div>
+      </div> -->
+      <div class="products-grid">
+        <!-- Product Cards -->
+        <div class="product-card">
+            <img src="img/b1.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>₹99000</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="img/b3.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>₹56770</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="img/b1.jpg" alt="Product 1">
+          <h3>Product 1</h3>
+          <p>₹99000</p>
+          <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+          <img src="img/b3.jpg" alt="Product 2">
+          <h3>Product 2</h3>
+          <p>₹56770</p>
+          <button>Add to Cart</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

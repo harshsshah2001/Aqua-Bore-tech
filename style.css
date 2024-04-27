@@ -1,0 +1,17 @@
+.hr1{
+    border: 1px solid black;
+    width: 1100px;
+}
+.homeproduct{
+    font-size:32px;
+    font-weight: bolder;    
+}
+.hr2{
+    border: 1px solid black;
+    width: 285px;
+}
+.hr3{
+    border: 1px solid rgb(213, 211, 211);
+    width: 272px;
+}
+

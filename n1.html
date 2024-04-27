@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar and Footer</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+  /* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 60px; /* Adjust based on navbar height */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.login-signup {
+  margin-left: auto;
+}
+
+.login-signup button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.content {
+  padding: 20px;
+  margin-top: 60px; /* Ensure content starts below the fixed navbar */
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+  </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+          <h1>Logo</h1>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <div class="login-signup">
+            <button>Login</button>
+            <button>Signup</button>
+          </div>
+        </div>
+      </nav>
+    
+      <main class="content">
+        <!-- Your main content goes here -->
+        <p>Main Content Goes Here</p>
+      </main>
+    
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+      </footer>
+    
+
+</body>
+</html>
